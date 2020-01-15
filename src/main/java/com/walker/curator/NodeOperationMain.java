@@ -1,6 +1,7 @@
 package com.walker.curator;
 
 import org.apache.curator.framework.CuratorFramework;
+import org.apache.curator.utils.CloseableUtils;
 import org.apache.zookeeper.AsyncCallback;
 import org.apache.zookeeper.CreateMode;
 import org.apache.zookeeper.data.Stat;
@@ -44,7 +45,7 @@ public class NodeOperationMain {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            client.close();
+            CloseableUtils.closeQuietly(client);
         }
     }
 
@@ -72,7 +73,7 @@ public class NodeOperationMain {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            client.close();
+            CloseableUtils.closeQuietly(client);
         }
     }
 
@@ -89,7 +90,7 @@ public class NodeOperationMain {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            client.close();
+            CloseableUtils.closeQuietly(client);
         }
     }
 
@@ -110,7 +111,7 @@ public class NodeOperationMain {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            client.close();
+            CloseableUtils.closeQuietly(client);
         }
     }
 
@@ -128,7 +129,7 @@ public class NodeOperationMain {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            client.close();
+            CloseableUtils.closeQuietly(client);
         }
     }
 }
